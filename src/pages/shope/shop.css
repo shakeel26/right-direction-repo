@@ -1,0 +1,88 @@
+.shop-first-image-box {
+  position: relative;
+}
+.shop-first-image {
+  display: block;
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  margin: 0 auto;
+}
+.c-white {
+  color: rgb(231, 229, 229);
+}
+.shop-first-image + h5 {
+  font-weight: 300;
+  font-size: 50px;
+  color: grey;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+.second-section {
+  display: flex;
+  height: 100vh;
+}
+.sec-sect-image {
+  display: block;
+  height: 330px;
+  width: auto;
+  position: absolute;
+  top: 50px;
+  right: -100px;
+}
+.sec-image-left {
+  flex: 1;
+  position: relative;
+}
+.sec-image-right {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+  position: relative;
+}
+.right-side-image {
+  display: block;
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+}
+.second-sec-title {
+  font-weight: 300;
+  font-size: 50px;
+  color: grey;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+.text-reposition {
+  position: relative;
+  top: 50px;
+  left: 0;
+}
+.third-section {
+  height: 100vh;
+  display: flex;
+  column-gap: 100px;
+  position: relative;
+  /* width: 100vw; */
+}
+.third-sec-img-div {
+  display: block;
+}
+.third-sec-img {
+  width: 100%;
+  /* height: 100%; */
+}
+.heading-third-sec {
+  position: absolute;
+  top: 64%;
+  left: 34%;
+  font-weight: 300;
+  font-size: 50px;
+  color: grey;
+}

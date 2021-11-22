@@ -1,0 +1,118 @@
+{
+  "data": {
+    "landing_page": [
+      {
+        "main_image": "/assets/landing-page/Images/RD_Anna1.jpg",
+        "dress_name": "/assets/landing-page/Outfit names/RD_Anna.jpg",
+        "dress_description": "/assets/landing-page/Texts/RD_Text_Anna.jpg",
+        "second": {
+          "items": [
+            {
+              "type": "shirt",
+              "url": "shirt_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "slider_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            },
+            {
+              "type": "pants",
+              "url": "pant_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "other_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            }
+          ]
+        }
+      },
+      {
+        "main_image": "/assets/landing-page/Images/RD_Anna2.jpg",
+        "second": {
+          "items": [
+            {
+              "type": "shirt",
+              "url": "shirt_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "slider_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            },
+            {
+              "type": "pants",
+              "url": "pant_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "other_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            }
+          ]
+        }
+      },
+      {
+        "main_image": "/assets/landing-page/Images/RD_Anna1.jpg",
+        "dress_name": "/assets/landing-page/Outfit names/RD_Anna.jpg",
+        "dress_description": "/assets/landing-page/Texts/RD_Text_Anna.jpg",
+        "second": {
+          "items": [
+            {
+              "type": "shirt",
+              "url": "shirt_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "slider_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            },
+            {
+              "type": "pants",
+              "url": "pant_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "other_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            }
+          ]
+        }
+      },
+      {
+        "main_image": "/assets/landing-page/Images/RD_Anna2.jpg",
+        "second": {
+          "items": [
+            {
+              "type": "shirt",
+              "url": "shirt_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "slider_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            },
+            {
+              "type": "pants",
+              "url": "pant_url",
+              "short_desc": "",
+              "third": {
+                "model_Image_url": "model_image_url",
+                "other_images": ["url1", "url2"],
+                "long_desc": ""
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

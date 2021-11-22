@@ -1,0 +1,54 @@
+.card-container {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.card-img {
+  width: 100%;
+}
+.card-body {
+  position: relative;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+.card-btns-container {
+  position: absolute;
+  bottom: -55px;
+  left: 30%;
+  transition: all 0.2s;
+}
+.price-tag {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  color: #23232c;
+}
+.price-lag {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  color: #23232c;
+}
+.card-image-container {
+  position: relative;
+  max-height: 453px;
+  overflow-y: hidden;
+}
+.card-image-container:hover .card-btns-container {
+  bottom: 15px;
+}
+.card-btn {
+  background-color: #23232c;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  margin-right: 10px;
+  transition: background-color 0.4s, color 0.4s;
+}
+.card-btn:hover {
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,86 @@
+.cart-container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  padding: 20px;
+  transition: right 0.4s;
+}
+.active-cart {
+  right: 0;
+}
+.cart-close-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.cart-close-btn-container > button {
+  border: 1px solid grey;
+  background-color: white;
+  /* padding: 10px; */
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.cart-close-btn-container > button:hover {
+  background-color: black;
+  color: white;
+}
+
+.cart-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cart-item-img {
+  /* flex:1, */
+  height: 115px;
+  width: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.cart-items-scoller {
+  height: 70%;
+  overflow-y: auto;
+}
+.cart-brand-name {
+  font-size: small;
+  font-weight: lighter;
+  color: grey;
+}
+.cart-item-quantity {
+  font-size: small;
+  font-weight: lighter;
+}
+.cart-ship-msg {
+  color: grey;
+}
+.cart-msg-bold {
+  font-weight: bold;
+}
+.cart-total-price-lable {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 2;
+}
+.cart-checkout-btn {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.cart-checkout-btn:hover {
+  background-color: white;
+  color: black;
+}

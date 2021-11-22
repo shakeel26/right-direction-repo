@@ -1,0 +1,62 @@
+.details-page {
+  padding: 40px;
+}
+.product-name-dpage {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.details-page-info {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 10px;
+}
+.bordered-div {
+  border-bottom: 1px solid #000;
+}
+.bordered-div-top {
+  border-top: 1px solid #000;
+}
+.info-label {
+  font-size: 12px;
+  font-weight: 300;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+.dpage-p-image {
+  display: block;
+  max-height: calc(100vh - 30vh);
+  width: 100%;
+}
+.v360-fullscreen-toggle-btn {
+  display: none;
+}
+.detail-size-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.size-btn {
+  padding: 5px 25px;
+  border-radius: 40px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+.size-btn:hover,
+.size-btn-active {
+  background-color: black;
+  color: white;
+}
+.dpage-add-btn {
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 20px;
+  padding: 7px 0;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.dpage-price-sec {
+  padding: 10px 0;
+}

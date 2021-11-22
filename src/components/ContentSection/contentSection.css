@@ -1,0 +1,11 @@
+.item-image-name {
+  width: 22%;
+}
+.couple-img {
+  display: flex;
+  column-gap: 15px;
+  padding: 15px;
+}
+.cloth-image {
+  width: 100%;
+}

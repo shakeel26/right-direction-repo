@@ -1,0 +1,14 @@
+.footer-container {
+  padding: 0 20px;
+}
+.footer-heading {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 35px;
+}
+.nav-container {
+  padding: 20px;
+}
+.nav-menu-list {
+  column-gap: 44px;
+}
