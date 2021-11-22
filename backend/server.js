@@ -16,7 +16,6 @@ global.TextEncoder = require("util").TextEncoder;
 app.use(cors());
 app.use(express.json());
 
-// mongoose atlas url: mongodb+srv://Moussa:Moussa@maysgrillcluster.h2iiy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // connection string of mongo db using mongoose
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Mongo db connected.")).catch(error => {
