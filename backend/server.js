@@ -1,4 +1,5 @@
 const express = require('express');
+var bodyParser = require('body-parser')
 const cors = require('cors');
 const http = require('http');
 const fileUpload = require("express-fileupload")
@@ -11,6 +12,11 @@ require('dotenv').config()
 const app = express();
 global.TextEncoder = require("util").TextEncoder; 
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
 
 // adding middleware
 app.use(cors());
