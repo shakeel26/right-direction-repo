@@ -36,7 +36,7 @@ export default function AddItem() {
     ItemComposition: "",
     ItemSize: "",
     ItemPhoto: "",
-    ItemImgCollection: "",
+    ItemImgCollection: [],
   });
 
   const handleUpdate = (e) => {
@@ -50,6 +50,7 @@ export default function AddItem() {
   const handleImage = (e) => {
     // console.log('image ', e.target.files)
     setAllValues({ ...allValues, [e.target.name]: e.target.files[0] });
+   
   };
 
   let ItemImgCollectionArray = [];
@@ -62,7 +63,7 @@ export default function AddItem() {
       ItemImgCollectionArray.push(e.target.files[i]);
     }
     console.log("collection ", ItemImgCollectionArray);
-    setAllValues({ ...allValues, [e.target.name]: ItemImgCollectionArray });
+    setAllValues({ ...allValues, [e.target.name]:  ItemImgCollectionArray});
     console.log("allValues ", allValues);
   };
 
@@ -77,11 +78,12 @@ export default function AddItem() {
     formData.append("ItemComposition", allValues.ItemComposition);
     formData.append("ItemSize", allValues.ItemSize);
     formData.append("ItemPhoto", allValues.ItemPhoto);
-    formData.append("ItemImgCollection", allValues.ItemImgCollectionArray);
+    formData.append("ItemImgCollection", allValues.ItemImgCollection);
 
-  
 
-    console.log("formData all values ", allValues.ItemImgCollection);
+    for(var i=0;i<allValues.ItemImgCollection.length;i++){
+      formData.append("ItemImgCollection", allValues.ItemImgCollection[i]);
+    }
 
 
     await axios
