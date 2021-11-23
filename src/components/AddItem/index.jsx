@@ -6,8 +6,13 @@ import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import SaveIcon from "@mui/icons-material/Save";
 import TextField from "@mui/material/TextField";
-import { categories } from "../../data.js";
+import { categories, sizes } from "../../data.js";
 import Box from "@mui/material/Box";
+import Checkbox from "@mui/material/Checkbox";
+import Select from "@mui/material/Select";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import InputLabel from "@mui/material/InputLabel";
+import ListItemText from "@mui/material/ListItemText";
 
 const useStyles = makeStyles((theme) => ({
   mainBox: {
@@ -23,10 +28,40 @@ const useStyles = makeStyles((theme) => ({
   input: {
     // display: 'none',
   },
+  indeterminateColor: {
+    color: "#f50057",
+  },
+  selectAllText: {
+    fontWeight: 500,
+  },
+  selectSelector: {
+    width: 300,
+  },
 }));
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+  getContentAnchorEl: null,
+  anchorOrigin: {
+    vertical: "bottom",
+    horizontal: "center",
+  },
+  transformOrigin: {
+    vertical: "top",
+    horizontal: "center",
+  },
+  variant: "menu",
+};
 
 export default function AddItem() {
   const classes = useStyles();
+  const [selected, setSelected] = useState([]);
   const [allValues, setAllValues] = useState({
     ItemName: "",
     ItemCode: "",
@@ -47,23 +82,27 @@ export default function AddItem() {
   const headers = {
     "Content-Type": "application/json",
   };
+  // update item image
   const handleImage = (e) => {
     // console.log('image ', e.target.files)
     setAllValues({ ...allValues, [e.target.name]: e.target.files[0] });
-   
+  };
+  // Updating Selected Sizes
+  const handleChange = (e) => {
+    const value = e.target.value;
+    // console.log(e.target.name ,' is now ', e.target.value)
+    setAllValues({ ...allValues, [e.target.name]: e.target.value });
+    setSelected(value);
   };
 
+  // Update images for slider in /item page
   let ItemImgCollectionArray = [];
-
   const handleImages = (e) => {
-    console.log('allValues after images upload ', allValues)
-    console.log("multiple images ", e.target.files, e.target.files.length);
-
     for (let i = 0; i < e.target.files.length; i++) {
       ItemImgCollectionArray.push(e.target.files[i]);
     }
     console.log("collection ", ItemImgCollectionArray);
-    setAllValues({ ...allValues, [e.target.name]:  ItemImgCollectionArray});
+    setAllValues({ ...allValues, [e.target.name]: ItemImgCollectionArray });
     console.log("allValues ", allValues);
   };
 
@@ -80,11 +119,9 @@ export default function AddItem() {
     formData.append("ItemPhoto", allValues.ItemPhoto);
     formData.append("ItemImgCollection", allValues.ItemImgCollection);
 
-
-    for(var i=0;i<allValues.ItemImgCollection.length;i++){
+    for (var i = 0; i < allValues.ItemImgCollection.length; i++) {
       formData.append("ItemImgCollection", allValues.ItemImgCollection[i]);
     }
-
 
     await axios
       .post("http://localhost:4000/form-post", formData, {
@@ -92,17 +129,18 @@ export default function AddItem() {
       })
       .then(
         (response) => {
-          // setAllValues({
-          //   ItemName: "",
-          //   ItemCode: "",
-          //   ItemPrice: "",
-          //   ItemCategory: "",
-          //   ItemDescription: "",
-          //   ItemComposition: "",
-          //   ItemSize: "",
-          //   ItemPhoto: "",
-          //   ItemImgCollection: "",
-          // });
+          // clear form after submit
+          setAllValues({
+            ItemName: "",
+            ItemCode: "",
+            ItemPrice: "",
+            ItemCategory: "",
+            ItemDescription: "",
+            ItemComposition: "",
+            ItemSize: "",
+            ItemPhoto: "",
+            ItemImgCollection: "",
+          });
           if (response.data === "This article already exists !") {
             alert("This article number already exists !");
           }
@@ -199,16 +237,26 @@ export default function AddItem() {
             </Grid>
 
             <Grid item lg={3}>
-              <TextField
-                id="item-size"
-                label="Item Size"
-                required
-                type="text"
+              <InputLabel id="mutiple-select-label">Multiple Select</InputLabel>
+              <Select
+                labelId="mutiple-select-label"
+                multiple
                 name="ItemSize"
-                onChange={handleUpdate}
-                value={allValues.ItemSize}
-                helperText="Please separate sizes with comma ,"
-              />
+                className={classes.selectSelector}
+                value={selected}
+                onChange={handleChange}
+                renderValue={(selected) => selected.join(", ")}
+                MenuProps={MenuProps}
+              >
+                {sizes.map((size) => (
+                  <MenuItem key={size} value={size}>
+                    <ListItemIcon>
+                      <Checkbox checked={selected.indexOf(size) > -1} />
+                    </ListItemIcon>
+                    <ListItemText primary={size} />
+                  </MenuItem>
+                ))}
+              </Select>
             </Grid>
 
             <Grid item lg={4}>

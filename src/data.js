@@ -1,5 +1,3 @@
-import { CodeSharp } from "@mui/icons-material";
-
 export const navList = [
   {
     id: 1,
@@ -59,5 +57,6 @@ export const landingPageData = [
   },
 ];
 
-
 export const categories = ['a','b','c','d'];
+
+export const sizes = ["S - Small","M - Medium"];

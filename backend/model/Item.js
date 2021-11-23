@@ -35,6 +35,12 @@ var ItemSchema = new Schema({
     },
     photoExt: {
         type: String
+    },
+    ItemImgCollection: {
+        type: Array
+    },
+    ItemImgCollectionExt: {
+        type: Array
     }
 });
 

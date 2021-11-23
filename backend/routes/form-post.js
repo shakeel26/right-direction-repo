@@ -60,13 +60,13 @@ const saveFiles = (photo,sliderPhotos, formFields) => {
         try {
             let data = {}
             let slider_photos=[];
-            slider_photos_extention=[];
+            let slider_photos_extention=[];
             let folder_path = 'uploadedData/Items/' + formFields.ItemCode + '/';
             photo.mv(folder_path+formFields.ItemCode+photoExt);
 
             for(let i=0;i<sliderPhotos.length;i++){
                 let sphoto = sliderPhotos[i];
-                sphotoExt = path.extname(sphoto.name);
+                let sphotoExt = path.extname(sphoto.name);
                 sphoto.mv(folder_path+sphoto.name);
                 slider_photos.push(sphoto.name);
                 slider_photos_extention.push(sphotoExt);
