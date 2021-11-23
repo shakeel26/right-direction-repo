@@ -1,20 +1,17 @@
 const express = require('express');
 var bodyParser = require('body-parser')
 const cors = require('cors');
-const http = require('http');
 const fileUpload = require("express-fileupload")
-const fs = require('fs');
-const https = require('https');
 const path = require('path');
 const mongoose = require('mongoose');
 require('dotenv').config()
 // inistialize app
 const app = express();
-global.TextEncoder = require("util").TextEncoder; 
+global.TextEncoder = require("util").TextEncoder;
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
- 
+
 // parse application/json
 app.use(bodyParser.json())
 
@@ -36,7 +33,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.use(fileUpload({
     createParentPath: true
-  }))
+}))
 
 //Serves all the request which includes /logo in the url from Images folder
 app.use('/uploadedData', express.static(__dirname + '/uploadedData'));
@@ -50,8 +47,7 @@ const PORT = process.env.PORT || 4000;
 
 // starting server
 app.listen(PORT, () => {
-   console.log(`server is running at port ${PORT}`);
+    console.log(`server is running at port ${PORT}`);
 });
-
 
 exports = module.exports = app;

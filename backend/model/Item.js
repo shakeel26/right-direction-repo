@@ -31,7 +31,8 @@ var ItemSchema = new Schema({
         type: String
     },
     ItemPhoto: {
-        type: String
+        type: String,
+        required: true
     },
     photoExt: {
         type: String
