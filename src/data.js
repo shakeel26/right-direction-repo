@@ -12,7 +12,7 @@ export const navList = [
   {
     id: 3,
     name: "Shop",
-    path: "/",
+    path: "/shop",
   },
   {
     id: 4,
@@ -57,6 +57,6 @@ export const landingPageData = [
   },
 ];
 
-export const categories = ['a','b','c','d'];
+export const categories = ["a", "b", "c", "d"];
 
-export const sizes = ["S - Small","M - Medium"];
+export const sizes = ["S - Small", "M - Medium"];

@@ -7,6 +7,7 @@ import AddItem from "./components/AddItem";
 import ShopePage from "./pages/shope/Shop";
 import DetailPage from "./pages/DetailPage";
 import ProductsPage from "./pages/Products";
+import CheckoutPage from "./pages/Checkout";
 
 export default function Layout() {
   return (
@@ -19,6 +20,7 @@ export default function Layout() {
         <Route path="/shop" exact element={<ShopePage />} />
         <Route path="/detail-page" exact element={<DetailPage />} />
         <Route path="/products" exact element={<ProductsPage />} />
+        <Route path="/checkout" exact element={<CheckoutPage />} />
       </Routes>
     </Router>
   );
