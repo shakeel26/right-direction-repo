@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollTopArrow";
 import AddItem from "./components/AddItem";
 import ShopePage from "./pages/shope/Shop";
 import DetailPage from "./pages/DetailPage";
+import ProductsPage from "./pages/Products";
 
 export default function Layout() {
   return (
@@ -17,6 +18,7 @@ export default function Layout() {
         <Route path="/add-item" exact element={<AddItem />} />
         <Route path="/shop" exact element={<ShopePage />} />
         <Route path="/detail-page" exact element={<DetailPage />} />
+        <Route path="/products" exact element={<ProductsPage />} />
       </Routes>
     </Router>
   );

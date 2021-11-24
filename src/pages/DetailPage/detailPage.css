@@ -24,7 +24,7 @@
 }
 .dpage-p-image {
   display: block;
-  max-height: calc(100vh - 30vh);
+  max-height: calc(100vh - 34vh);
   width: 100%;
 }
 .v360-fullscreen-toggle-btn {
@@ -59,4 +59,15 @@
 }
 .dpage-price-sec {
   padding: 10px 0;
+}
+.p-image-slider {
+  overflow-x: hidden;
+  max-height: calc(100vh - 34vh);
+}
+.p-slider-image-container {
+  height: 100%;
+}
+.p-slider-image {
+  height: inherit;
+  width: 100%;
 }

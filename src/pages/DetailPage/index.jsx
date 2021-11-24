@@ -8,7 +8,7 @@ function DetailPage() {
     <div className="details-page">
       <h1 className="product-name-dpage">Product Name Here</h1>
       <Grid container spacing={2}>
-        <Grid md={4} lg={4}>
+        <Grid item md={4} lg={4}>
           <div className="details-page-info">
             <div className="bordered-div info-label">Article Number</div>
             <details>
@@ -39,11 +39,15 @@ function DetailPage() {
             <div className="dpage-add-btn">add to cart</div>
           </div>
         </Grid>
-        <Grid md={4} lg={4}>
-          <ThreeSixty amount={36} spinReverse={true} imagePath="https://scaleflex.cloudimg.io/width/600/q35/https://scaleflex.ultrafast.io/https://scaleflex.airstore.io/demo/chair-360-36" fileName="chair_{index}.jpg?v1" autoplay={36} loop={4} />
-        </Grid>
-        <Grid md={4} lg={4}>
+        <Grid item md={4} lg={4}>
           <img className="dpage-p-image" src="/images/outfit-image/0M6A6784.jpg" alt="Data js" />
+        </Grid>
+        <Grid item md={4} lg={4}>
+          <div className="p-image-slider">
+            <div className="p-slider-image-container">
+              <img className="p-slider-image" src="/images/outfit-image/0M6A6784.jpg" alt="hello world" />
+            </div>
+          </div>
         </Grid>
       </Grid>
     </div>
