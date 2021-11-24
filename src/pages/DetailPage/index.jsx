@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import ThreeSixty from "react-360-view";
 import "./detailPage.css";
 
 function DetailPage() {
