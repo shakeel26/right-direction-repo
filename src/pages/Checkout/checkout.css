@@ -65,3 +65,6 @@
 .checkout-cinfo {
   flex: 2;
 }
+.checkout-total-price {
+  padding: 10px 0;
+}

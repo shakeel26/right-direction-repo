@@ -1,6 +1,7 @@
 import React from "react";
 import "./checkout.css";
 import { Grid, Container } from "@mui/material";
+import StripeElement from "../../components/StripeElement";
 
 function Checkout() {
   return (
@@ -29,8 +30,11 @@ function Checkout() {
                 <input className="checkout-input my-7" type="text" placeholder="Postal Code" />
               </div>
               <div>
-                <button className="checkout-pbtn">Continue to shopping ?</button>
+                <StripeElement />
               </div>
+              {/* <div>
+                <button className="checkout-pbtn">Continue to shopping ?</button>
+              </div> */}
             </div>
           </Grid>
           <Grid item md={5} className="checkout-right-side">
@@ -46,6 +50,12 @@ function Checkout() {
                 <div>delte</div>
               </div>
             </div>
+            <hr />
+            <div className="flex-space-between checkout-total-price">
+              <div>Total Price</div>
+              <div>$44</div>
+            </div>
+            <hr />
           </Grid>
         </Grid>
       </Container>
